@@ -61,7 +61,7 @@ LRESULT Char2Json(QString &buff, QJsonObject &json)
 					//区站号
 					json_one.insert("StationID", strlist.at(1));
 				
-					//02农委业务
+					//农田智能监测站
 					json_one.insert("ServiceTypeID", NTJCZ);
 				
 					//设备号
