@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{B72D9FDE-CC4E-34F5-8BB0-528760C778ED}</ProjectGuid>
+    <ProjectGuid>{A7048A1F-5B16-40ED-8755-E55B3CEEFA9E}</ProjectGuid>
     <RootNamespace>NW</RootNamespace>
     <Keyword>Qt4VSv1.0</Keyword>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
