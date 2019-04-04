@@ -30,7 +30,7 @@ QString GetVersionNo()
 //获取端口号
 int GetPort()
 {
-	return 8019;
+	return 27019;
 }
 //解析数据
 LRESULT Char2Json(QString &buff, QJsonObject &json)
@@ -123,16 +123,12 @@ LRESULT Char2Json(QString &buff, QJsonObject &json)
 					QDateTime current_date_time = QDateTime::currentDateTime();
 					QString current_date = current_date_time.toString("yyyy.MM.dd hh:mm:ss");
 					QString current_day = current_date_time.toString("yyyy-MM-dd");
-					QString fileName = QCoreApplication::applicationDirPath() + "\\NTZNJC\\" + strlist.at(1) + "\\" + current_day;
+					QString fileName = QCoreApplication::applicationDirPath() + "\\"+ QString::fromLocal8Bit("农田智能监测站") +"\\" + strlist.at(1) + "\\" + current_day;
 					QDir dir(fileName);
 					if (!dir.exists())
 						dir.mkpath(fileName);//创建多级目录
 					fileName += "\\data.txt";
 					QFile file(fileName);
-
-					if (!file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append))
-					{
-					}
 					QTextStream in(&file);
 					in << current_date << "\r\n" << strBuff<<"\r\n";
 					file.close();
