@@ -130,6 +130,7 @@ LRESULT Char2Json(QString &buff, QJsonObject &json)
 					fileName += "\\data.txt";
 					QFile file(fileName);
 					QTextStream in(&file);
+					file.open(QIODevice::ReadWrite | QIODevice::Append);
 					in << current_date << "\r\n" << strBuff<<"\r\n";
 					file.close();
 
